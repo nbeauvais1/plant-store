@@ -1,4 +1,4 @@
-import { map } from '@firebase/util';
+
 import {ref as dataRef, get, set, update} from 'firebase/database';
 import {db} from './libs/firebase/firebaseConfig';
 import { plantProduct } from './templates/plantProduct';
