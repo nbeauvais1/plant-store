@@ -1,26 +1,20 @@
 import { map } from '@firebase/util';
 import {ref as dataRef, get, set, update} from 'firebase/database';
 import {db} from './libs/firebase/firebaseConfig';
-import { vacationRental } from './templates/vacationRental';
+import { plantProduct } from './templates/plantProduct';
 
 
 async function pageInit(){
-    const rentalRef = dataRef(db, 'rentals/');
-    const rentalSnapShot = await get(rentalRef)
-    const data = rentalSnapShot.val();
-    // ES Modules For The Render Function
+    const plantRef = dataRef(db, 'plants/');
+    const plantSnapShot = await get(plantRef)
+    const data = plantSnapShot.val();
     
-    // Data -> you need to know its structure
-    // Firebase structure of Obj of Objects { {}, {}, {}, {} }
-    // Obj.keys Obj.values, Object.entries
-    const cards = Object.values(data).map(rental=>{
-        // console.log(vacationRental(rental))
-        const card = vacationRental(rental)
-        document.querySelector('main').append(card)
+    const cards = Object.values(data).map(plant=>{
+        
+        const card = plantProduct(plant)
+        document.querySelector('.products').append(card)
         return null
     })
 }
 
 pageInit()
-
-// Time: 1:21:03

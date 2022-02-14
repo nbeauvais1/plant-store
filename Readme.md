@@ -1,4 +1,4 @@
-# Crudy JavaScript TEST
+# Crudy JavaScript
 How to setup a javascript project with firebase cloud services
  
 ## Step 1: Initialize Project Root Folder Using NPM
