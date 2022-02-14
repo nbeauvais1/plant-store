@@ -1,8 +1,8 @@
 {
-  "name": "jim-hortons-vacations",
+  "name": "plant-store",
   "version": "1.0.0",
   "description": "### Initialize Project Folder to Use NPM  - on the command line run the following command. ```npm    npm init ```",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "clean": "rm -rf node_modules .git .parcel-cache dist .DS_Store",
     "static":"cp -rf ./src/static   dist",
